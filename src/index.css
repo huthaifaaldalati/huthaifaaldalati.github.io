@@ -1,0 +1,133 @@
+@import "tailwindcss";
+
+@theme {
+  /* Colors */
+  --color-bg-primary: #05020a;
+  --color-bg-secondary: #0f0518;
+
+  --color-brand-cyan: #00f3ff;
+  --color-brand-violet: #bc13fe;
+  --color-brand-pink: #ff0099;
+
+  /* Fonts */
+  --font-family-sans: "Cairo", "Inter", sans-serif;
+  --font-family-display: "Cairo", "Outfit", sans-serif;
+
+  /* Background Images */
+  --background-image-hero-glow: conic-gradient(from 180deg at 50% 50%, #bc13fe 0deg, #00f3ff 180deg, #bc13fe 360deg);
+
+  /* Animations */
+  --animate-spin-slow: spin 10s linear infinite;
+  --animate-pulse-fast: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  --animate-float: float 6s ease-in-out infinite;
+}
+
+/* Custom Keyframes */
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes gradient-xy {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes flare {
+
+  0%,
+  75% {
+    transform: translateX(-150%) skewX(-45deg);
+  }
+
+  100% {
+    transform: translateX(150%) skewX(-45deg);
+  }
+}
+
+/* Base Styles */
+@layer base {
+  @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700;900&display=swap');
+
+  body {
+    @apply bg-bg-primary text-white font-sans;
+    direction: rtl;
+    /* Continuous blended background */
+    background: radial-gradient(circle at 50% -20%, #1a0b2e, #05020a 40%);
+    background-attachment: fixed;
+    /* Parallax-like effect ensures no breaks */
+  }
+}
+
+/* ... existing utilities ... */
+
+
+
+
+/* Animation Utilities */
+.fade-up {
+  opacity: 1;
+  transform: none;
+}
+
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-in-section {
+  opacity: 1;
+  transform: none;
+}
+
+.fade-in-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.slide-in-right {
+  opacity: 1;
+  transform: none;
+}
+
+.slide-in-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.slide-in-left {
+  opacity: 1;
+  transform: none;
+}
+
+.slide-in-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.animate-gradient-xy {
+  background-size: 200% auto;
+  animation: gradient-xy 3s ease infinite;
+  will-change: background-position;
+}
+
+.animate-flare {
+  animation: flare 3s infinite linear;
+  will-change: transform;
+}
