@@ -3,9 +3,10 @@ import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 const ModuleCard = ({ number, title, lessons, delay, isVisible }) => (
     <div
-        className={`glass p-8 rounded-3xl border border-white/5 hover:border-brand-violet/30 transition-all duration-300 hover:-translate-y-2 fade-up ${isVisible ? 'visible' : ''}`}
+        className={`glass p-8 rounded-3xl border border-white/5 hover:border-brand-cyan/50 hover:bg-brand-violet/5 hover:shadow-[0_0_30px_rgba(188,19,254,0.15)] transition-all duration-300 hover:-translate-y-2 fade-up ${isVisible ? 'visible' : ''} group`}
         style={{ transitionDelay: `${delay}ms` }}
     >
+        <div className="absolute inset-0 bg-gradient-to-br from-brand-cyan/0 via-brand-violet/0 to-brand-pink/0 group-hover:from-brand-cyan/5 group-hover:via-brand-violet/5 group-hover:to-brand-pink/5 rounded-3xl transition-all duration-500"></div>
         <div className="flex flex-col gap-6">
             <div className="flex items-center gap-4">
                 <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-gradient-to-br from-brand-violet to-brand-cyan flex items-center justify-center text-white font-bold text-xl shadow-lg shadow-brand-violet/20">

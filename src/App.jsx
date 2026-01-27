@@ -28,14 +28,14 @@ function App() {
         {/* Gap-0 ensures no space between sections for blending */}
         <Hero />
 
+        {/* Course Modules */}
+        <CourseModules />
+
         {/* Selling Section */}
         <Payment />
 
         {/* Risk Reversal */}
         <RiskReversal />
-
-        {/* Course Modules */}
-        <CourseModules />
 
         {/* About Me */}
         <Bio />

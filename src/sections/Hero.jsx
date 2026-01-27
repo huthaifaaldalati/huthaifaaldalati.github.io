@@ -33,17 +33,8 @@ const Hero = () => {
                     تعلم الأسرار يلي ساعدتني أوصل لأكثر من ١٢٥ مليون مشاهدة و ٤٠٠ ألف دولار مبيعات
                 </p>
 
-                <div className={`flex flex-col items-center gap-4 mb-16 fade-up ${isVisible ? 'visible' : ''}`} style={{ transitionDelay: '600ms' }}>
-                    <Button variant="glow" className="px-10 py-5 text-lg md:text-xl w-full md:w-auto">
-                        أريد تعلم صناعة المحتوى اليوم
-                    </Button>
-                    <p className="text-sm text-gray-400/80 max-w-md">
-                        احجز مكانك الآن واحصل على مكالمة استشارية مجانية 1:1 مع حذيفة.
-                    </p>
-                </div>
-
                 {/* Video Container */}
-                <div className={`relative w-full max-w-4xl aspect-video rounded-3xl overflow-hidden glass shadow-[0_0_50px_rgba(188,19,254,0.2)] border-brand-violet/30 group animate-float fade-up ${isVisible ? 'visible' : ''}`} style={{ transitionDelay: '800ms' }}>
+                <div className={`relative w-full max-w-4xl aspect-video rounded-3xl overflow-hidden glass shadow-[0_0_50px_rgba(188,19,254,0.2)] border-brand-violet/30 group animate-float fade-up ${isVisible ? 'visible' : ''}`} style={{ transitionDelay: '600ms' }}>
 
                     <div className="absolute inset-0 bg-gradient-to-t from-bg-secondary via-transparent to-transparent opacity-60"></div>
 
@@ -59,6 +50,15 @@ const Hero = () => {
                     <div className="absolute bottom-4 left-4 w-4 h-4 border-l-2 border-b-2 border-brand-cyan"></div>
                     <div className="absolute bottom-4 right-4 w-4 h-4 border-r-2 border-b-2 border-brand-cyan"></div>
 
+                </div>
+
+                <div className={`flex flex-col items-center gap-4 mt-12 fade-up ${isVisible ? 'visible' : ''}`} style={{ transitionDelay: '800ms' }}>
+                    <Button variant="glow" className="px-10 py-5 text-lg md:text-xl w-full md:w-auto">
+                        أريد تعلم صناعة المحتوى اليوم
+                    </Button>
+                    <p className="text-sm text-gray-400/80 max-w-md">
+                        احجز مكانك الآن واحصل على مكالمة استشارية مجانية 1:1 مع حذيفة.
+                    </p>
                 </div>
             </div>
         </section>

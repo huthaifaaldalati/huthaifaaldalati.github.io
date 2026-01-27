@@ -17,7 +17,7 @@ const Payment = () => {
                 <div className={`glass border border-white/10 rounded-[2.5rem] p-8 md:p-12 text-center relative overflow-hidden group hover:border-brand-cyan/30 transition-colors duration-500 fade-up ${isVisible ? 'visible' : ''}`}>
 
                     <div className="inline-block px-6 py-2 mb-6 rounded-full bg-brand-pink/20 border border-brand-pink text-brand-pink text-sm font-bold tracking-widest uppercase animate-pulse">
-                        خصم 67% لفترة محدودة
+                        خصم 33% لفترة محدودة
                     </div>
 
                     <h2 className="text-4xl font-bold mb-4 font-display">أبجدية الانتشار</h2>
