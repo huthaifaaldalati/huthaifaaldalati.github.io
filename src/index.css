@@ -66,7 +66,7 @@
   @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700;900&display=swap');
 
   body {
-    @apply bg-bg-primary text-white font-sans;
+    @apply bg-bg-primary text-white font-sans overflow-x-hidden;
     direction: rtl;
     /* Continuous blended background */
     background: radial-gradient(circle at 50% -20%, #1a0b2e, #05020a 40%);

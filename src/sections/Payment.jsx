@@ -8,7 +8,7 @@ const Payment = () => {
         <section
             id="payment-section"
             ref={domRef}
-            className={`py-32 px-8 flex flex-col items-center justify-center relative overflow-hidden`}
+            className={`py-20 px-8 flex flex-col items-center justify-center relative overflow-hidden`}
         >
             {/* Background Gradients */}
 
@@ -25,21 +25,23 @@ const Payment = () => {
 
                     <div className="flex flex-col items-center justify-center mb-10 gap-2">
                         <span className="text-8xl font-black text-transparent bg-clip-text bg-gradient-to-r from-white via-brand-cyan to-brand-violet font-display">
-                            $147
+                            $97
                         </span>
-                        <span className="text-3xl text-gray-500 line-through decoration-2 decoration-red-500">$447</span>
+                        <span className="text-3xl text-gray-500 line-through decoration-2 decoration-red-500">$147</span>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-right mb-10 text-gray-300">
                         {[
-                            'تدريب لايف شامل لمدة شهر',
-                            'متابعة إضافية لمدة 30 يوم',
                             'نظام عملي من الألف إلى الياء',
-                            'استراتيجيات النمو الأورغانيك',
-                            'أدوات وتقنيات صناعة المحتوى',
-                            'نماذج وقوالب جاهزة',
+                            'استراتيجيات خلق الأفكار',
+                            'أسرار كتابة الهوك',
+                            'كيف تكتب سكريبت',
+                            'فن السرد القصصي',
+                            'اكسر خوفك من الظهور أمام الكاميرا',
+                            'قوالب جاهزة',
                             'مجتمع خاص للطلاب',
-                            'تحديثات مجانية للمحتوى'
+                            'محتوى محدث باستمرار',
+                            'وصول إلى الأبد'
                         ].map((item, i) => (
                             <div key={i} className="flex items-center gap-3">
                                 <div className="w-5 h-5 rounded-full bg-brand-cyan/20 flex items-center justify-center text-brand-cyan text-xs">✓</div>
@@ -48,22 +50,25 @@ const Payment = () => {
                         ))}
                     </div>
 
-                    <button
-                        className="w-full py-5 text-2xl font-bold rounded-2xl bg-gradient-to-r from-brand-violet via-brand-pink to-brand-violet text-white animate-gradient-xy hover:scale-105 hover:shadow-[0_0_40px_rgba(188,19,254,0.4)] transition-all duration-300 active:scale-95 mb-6"
+                    <a
+                        href="https://whop.com/huthaifaaldalati/digital-presence-code/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="block w-full py-5 text-2xl font-bold rounded-2xl bg-gradient-to-r from-brand-violet via-brand-pink to-brand-violet text-white animate-gradient-xy hover:scale-105 hover:shadow-[0_0_40px_rgba(188,19,254,0.4)] transition-all duration-300 active:scale-95 mb-6 text-center"
                     >
                         اشترك الآن
-                    </button>
+                    </a>
 
-                    <p className="text-brand-cyan/80 text-sm mb-8">🔥 الأماكن محدودة للدفعة الأولى - السعر سيرتفع لاحقاً!</p>
-                </div>
+                    <p className="text-brand-cyan/80 text-sm mb-4">🔥 الأماكن محدودة للدفعة الأولى - السعر سيرتفع لاحقاً!</p>
 
-                {/* Guarantee */}
-                <div className={`glass border border-white/10 rounded-3xl p-6 mt-6 flex flex-col items-center text-center relative overflow-hidden fade-up ${isVisible ? 'visible' : ''}`} style={{ transitionDelay: '400ms' }}>
-                    <span className="text-3xl mb-2">✅</span>
-                    <h4 className="text-lg font-bold text-white mb-2">ضمان استرداد المال لمدة 30 يوم</h4>
-                    <p className="text-sm text-gray-400 max-w-md">
-                        إذا طبّقت كل ما في البرنامج ولم تحقق أي نتائج خلال 30 يوم، سأرجع لك كامل المبلغ بدون أي أسئلة.
-                    </p>
+                    <a
+                        href="https://api.whatsapp.com/send?phone=905073538511"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-block p-4 rounded-xl bg-[#25D366]/10 border border-[#25D366]/30 text-[#25D366] text-xs md:text-sm font-bold hover:bg-[#25D366]/20 transition-all duration-300"
+                    >
+                        في حال كنت تفضل أسلوب دفع مختلف (حوالة إلخ.) اضغط للانتقال إلى واتساب
+                    </a>
                 </div>
             </div>
         </section>

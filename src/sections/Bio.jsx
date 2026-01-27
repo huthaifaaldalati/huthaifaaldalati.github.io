@@ -1,7 +1,24 @@
 import React from 'react';
 import Button from '../components/Button';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
+import { useCountUp } from '../hooks/useCountUp';
 import profileImage from '../assets/IMG_0462 2.jpg';
+
+const StatCard = ({ end, label, prefix = "", suffix = "" }) => {
+    const [count, ref] = useCountUp(end, 2000);
+
+    // Formatting numbers with dots
+    const formattedCount = Math.floor(count).toLocaleString('de-DE');
+
+    return (
+        <div ref={ref} className="bg-white/5 p-6 rounded-2xl hover:scale-105 transition-transform duration-300 border border-white/5 hover:border-brand-pink/30 flex flex-col items-center justify-center">
+            <span className="block text-brand-pink font-bold text-3xl mb-2" dir="ltr">
+                {prefix}{formattedCount}{suffix}
+            </span>
+            <span className="text-lg">{label}</span>
+        </div>
+    );
+};
 
 const Bio = () => {
     const [domRef, isVisible] = useScrollAnimation();
@@ -9,7 +26,7 @@ const Bio = () => {
     return (
         <section
             ref={domRef}
-            className={`relative py-32 px-8`}
+            className={`relative py-20 px-8`}
         >
             <div className="max-w-4xl mx-auto glass rounded-[3rem] p-12 md:p-20 relative overflow-hidden text-center">
 
@@ -38,18 +55,9 @@ const Bio = () => {
                     <div className={`glass-card p-8 rounded-3xl w-full mb-10 fade-up ${isVisible ? 'visible' : ''}`} style={{ transitionDelay: '600ms' }}>
                         <h3 className="text-2xl font-bold mb-8 text-brand-cyan">النتائج كانت مذهلة:</h3>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center text-gray-300">
-                            <div className="bg-white/5 p-6 rounded-2xl hover:scale-105 transition-transform duration-300 border border-white/5 hover:border-brand-pink/30 flex flex-col items-center justify-center">
-                                <span className="block text-brand-pink font-bold text-3xl mb-2" dir="ltr">300 ➔ 10K</span>
-                                <span className="text-lg">متابع في 14 يوم</span>
-                            </div>
-                            <div className="bg-white/5 p-6 rounded-2xl hover:scale-105 transition-transform duration-300 border border-white/5 hover:border-brand-pink/30 flex flex-col items-center justify-center">
-                                <span className="block text-brand-pink font-bold text-3xl mb-2">$1500</span>
-                                <span className="text-lg">أول مبيعة في 21 يوم</span>
-                            </div>
-                            <div className="bg-white/5 p-6 rounded-2xl hover:scale-105 transition-transform duration-300 border border-white/5 hover:border-brand-pink/30 flex flex-col items-center justify-center">
-                                <span className="block text-brand-pink font-bold text-3xl mb-2" dir="ltr">+31K</span>
-                                <span className="text-lg">متابع عبر المنصات</span>
-                            </div>
+                            <StatCard end={10000} label="متابع في 14 يوم" />
+                            <StatCard end={4170} label="أول مبيعة في 21 يوم" prefix="$" />
+                            <StatCard end={32214} label="متابع عبر المنصات" prefix="+" />
                         </div>
                     </div>
 

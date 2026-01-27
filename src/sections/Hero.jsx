@@ -29,15 +29,17 @@ const Hero = () => {
                     </span>
                 </h1>
 
-                <p className={`text-xl md:text-2xl mb-12 text-gray-400 max-w-3xl mx-auto leading-relaxed fade-up ${isVisible ? 'visible' : ''}`} style={{ transitionDelay: '400ms' }}>
-                    تعلّم السستم اللي جاب أكثر من 125 مليون مشاهدة وساعدني أبني براند شخصي يجيب عملاء ودخل مستمر، خلال 30 يوم فقط.
+                <p className={`text-xl md:text-2xl mb-10 text-gray-400 max-w-3xl mx-auto leading-relaxed fade-up ${isVisible ? 'visible' : ''}`} style={{ transitionDelay: '400ms' }}>
+                    تعلم الأسرار يلي ساعدتني أوصل لأكثر من ١٢٥ مليون مشاهدة و ٤٠٠ ألف دولار مبيعات
                 </p>
 
-                <div className={`flex flex-col md:flex-row gap-6 mb-16 fade-up ${isVisible ? 'visible' : ''}`} style={{ transitionDelay: '600ms' }}>
-                    <Button variant="glow" className="px-12 py-4 text-xl">
-                        احجز مكانك الآن
+                <div className={`flex flex-col items-center gap-4 mb-16 fade-up ${isVisible ? 'visible' : ''}`} style={{ transitionDelay: '600ms' }}>
+                    <Button variant="glow" className="px-10 py-5 text-lg md:text-xl w-full md:w-auto">
+                        أريد تعلم صناعة المحتوى اليوم
                     </Button>
-
+                    <p className="text-sm text-gray-400/80 max-w-md">
+                        احجز مكانك الآن واحصل على مكالمة استشارية مجانية 1:1 مع حذيفة.
+                    </p>
                 </div>
 
                 {/* Video Container */}
@@ -46,8 +48,8 @@ const Hero = () => {
                     <div className="absolute inset-0 bg-gradient-to-t from-bg-secondary via-transparent to-transparent opacity-60"></div>
 
                     <div className="absolute inset-0 flex items-center justify-center">
-                        <div className="w-20 h-20 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center cursor-pointer group-hover:scale-110 transition-transform duration-300">
-                            <span className="text-brand-cyan text-3xl ml-1">▶</span>
+                        <div className="w-24 h-24 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center cursor-pointer group-hover:scale-110 transition-transform duration-300">
+                            <span className="text-brand-cyan text-4xl ml-1">▶</span>
                         </div>
                     </div>
 
