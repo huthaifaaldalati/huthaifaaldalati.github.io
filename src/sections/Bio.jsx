@@ -2,7 +2,7 @@ import React from 'react';
 import Button from '../components/Button';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 import { useCountUp } from '../hooks/useCountUp';
-import profileImage from '../assets/IMG_0462 2.jpg';
+import profileImage from '../assets/blfbml;fbmlf.png';
 
 const StatCard = ({ end, label, prefix = "", suffix = "" }) => {
     const [count, ref] = useCountUp(end, 2000);
@@ -34,38 +34,62 @@ const Bio = () => {
 
                     <div className={`mb-12 relative fade-up ${isVisible ? 'visible' : ''}`}>
                         <div className="absolute inset-0 bg-brand-cyan/20 blur-3xl rounded-full"></div>
-                        <div className="w-40 h-40 rounded-full bg-bg-secondary border-4 border-brand-cyan/30 flex items-center justify-center relative z-10 mx-auto overflow-hidden">
+                        <div className="w-56 h-56 rounded-full bg-bg-secondary border-4 border-brand-cyan/30 flex items-center justify-center relative z-10 mx-auto overflow-hidden shadow-[0_0_30px_rgba(0,243,255,0.3)]">
                             <img src={profileImage} alt="Huzaifa Aldalati" className="w-full h-full object-cover" />
                         </div>
                     </div>
 
-                    <h2 className={`text-3xl md:text-5xl font-bold mb-6 text-white font-display fade-up ${isVisible ? 'visible' : ''}`} style={{ transitionDelay: '200ms' }}>
-                        من هو <span className="text-brand-cyan">حذيفة الدالاتي؟</span>
+                    <h2 className={`text-4xl md:text-6xl font-bold mb-8 text-white font-display fade-up ${isVisible ? 'visible' : ''}`} style={{ transitionDelay: '200ms' }}>
+                        من هو <br />
+                        <span className="inline-block mt-4 text-transparent bg-clip-text bg-gradient-to-r from-brand-cyan via-white to-brand-cyan animate-pulse">
+                            حذيفة الدالاتي؟
+                        </span>
                     </h2>
 
-                    <p className={`text-lg md:text-xl text-gray-300 mb-10 leading-relaxed font-light max-w-2xl mx-auto fade-up ${isVisible ? 'visible' : ''}`} style={{ transitionDelay: '400ms' }}>
-                        كنت بعالم <span className="text-red-500">التسويق</span> الرقمي فعليًا من 4 سنين.
-                        <br />
-                        تعلّمت كثير وحقّقت أرقام حلوة، بس الطريق ما كان سهل.
-                        <br />
-                        جرّبت الكل، لحد ما لخّصت كل شي ضمن <strong>سِستم عملي</strong> سهّل الشغل عليّ وعلى فريقي.
-                        بس ظل عندي سؤال واحد: <span className="text-brand-violet">هل بقدر أطبّق نفس السِستم على نفسي؟</span>
-                    </p>
+                    <div className={`text-lg md:text-xl text-gray-300 mb-12 leading-relaxed font-light max-w-2xl mx-auto flex flex-col gap-4 fade-up ${isVisible ? 'visible' : ''}`} style={{ transitionDelay: '400ms' }}>
+                        <p className="md:text-center w-full">
+                            كنت بعالم <span className="text-red-500 font-medium">التسويق الرقمي</span> فعليًا من 4 سنين.
+                        </p>
+                        <p className="md:text-center w-full">
+                            تعلّمت كثير وحقّقت أرقام حلوة، بس الطريق ما كان سهل.
+                        </p>
+                        <p className="md:text-center w-full">
+                            جرّبت كل شي، لحد ما لخّصت كل خبرتي بسِستم عملي سهّل الشغل عليّ وعفريقي.
+                        </p>
+                        <p className="md:text-center w-full mt-4">
+                            بس ظل عندي سؤال واحد:
+                        </p>
+                        <p className="text-2xl md:text-3xl font-bold text-white mt-2 mb-4 bg-brand-violet/10 py-2 px-4 rounded-lg border border-brand-violet/20 inline-block mx-auto transform hover:scale-105 transition-transform duration-300">
+                            هل بقدر أطبّق نفس السِستم على نفسي؟
+                        </p>
+                    </div>
 
-                    <div className={`glass-card p-8 rounded-3xl w-full mb-10 fade-up ${isVisible ? 'visible' : ''}`} style={{ transitionDelay: '600ms' }}>
-                        <h3 className="text-2xl font-bold mb-8 text-brand-cyan">النتائج كانت مذهلة:</h3>
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center text-gray-300">
-                            <StatCard end={10000} label="متابع في 14 يوم" />
-                            <StatCard end={4170} label="أول مبيعة في 21 يوم" prefix="$" />
-                            <StatCard end={32214} label="متابع عبر المنصات" prefix="+" />
+                    <div className={`glass-card p-1 rounded-3xl w-full mb-12 fade-up ${isVisible ? 'visible' : ''}`} style={{ transitionDelay: '600ms' }}>
+                        <div className="bg-bg-primary/60 rounded-[1.3rem] p-8 border border-brand-cyan/20 shadow-[0_0_40px_rgba(0,243,255,0.05)]">
+                            <h3 className="text-3xl md:text-4xl font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-brand-cyan to-brand-violet animate-pulse">
+                                النتائج كانت مذهلة:
+                            </h3>
+                            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center text-gray-300">
+                                <StatCard end={10000} label="متابع في 14 يوم" />
+                                <StatCard end={4170} label="أول مبيعة في 21 يوم" prefix="$" />
+                                <StatCard end={32214} label="متابع عبر المنصات" prefix="+" />
+                            </div>
                         </div>
                     </div>
 
-                    <div className={`bg-bg-primary/50 p-6 rounded-2xl border border-white/10 mb-8 max-w-2xl fade-up ${isVisible ? 'visible' : ''}`} style={{ transitionDelay: '800ms' }}>
-                        <p className="text-lg">
-                            هذا السِستم خلاصة أكثر من <span className="text-brand-cyan font-bold">125 مليون مشاهدة</span>،
-                            ومبيعات تفوق <span className="text-brand-cyan font-bold">400,000 دولار</span>.
-                        </p>
+                    <div className={`bg-bg-primary/50 p-8 rounded-3xl border border-white/10 mb-10 max-w-3xl mx-auto fade-up ${isVisible ? 'visible' : ''}`} style={{ transitionDelay: '800ms' }}>
+                        <h4 className="text-xl text-gray-400 mb-6">هذا السِستم خلاصة أكثر من</h4>
+                        <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16">
+                            <div className="flex flex-col items-center">
+                                <span className="text-4xl md:text-5xl font-bold text-brand-cyan mb-2">125 مليون</span>
+                                <span className="text-gray-300">مشاهدة</span>
+                            </div>
+                            <div className="w-px h-12 bg-white/10 hidden md:block"></div>
+                            <div className="flex flex-col items-center">
+                                <span className="text-4xl md:text-5xl font-bold text-brand-cyan mb-2">+400,000</span>
+                                <span className="text-gray-300">دولار مبيعات</span>
+                            </div>
+                        </div>
                     </div>
 
                     <div className={`fade-up ${isVisible ? 'visible' : ''}`} style={{ transitionDelay: '1000ms' }}>

@@ -65,8 +65,9 @@ const Payment = () => {
                         href="https://api.whatsapp.com/send?phone=905073538511"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-block p-4 rounded-xl bg-[#25D366]/10 border border-[#25D366]/30 text-[#25D366] text-xs md:text-sm font-bold hover:bg-[#25D366]/20 transition-all duration-300"
+                        className="inline-block p-4 rounded-xl bg-[#25D366]/10 border border-[#25D366]/30 text-[#25D366] text-xs md:text-sm font-bold hover:bg-[#25D366]/20 transition-all duration-300 relative group overflow-hidden"
                     >
+                        <div className="absolute inset-0 border-2 border-[#25D366] rounded-xl opacity-0 scale-110 group-hover:scale-100 group-hover:opacity-100 transition-all duration-300"></div>
                         في حال كنت تفضل أسلوب دفع مختلف (حوالة إلخ.) اضغط للانتقال إلى واتساب
                     </a>
                 </div>
