@@ -61,6 +61,24 @@
   }
 }
 
+@keyframes glow-pulse {
+
+  0%,
+  100% {
+    opacity: 0.85;
+    text-shadow: 0 0 8px currentColor;
+  }
+
+  50% {
+    opacity: 1;
+    text-shadow: 0 0 20px currentColor, 0 0 35px currentColor;
+  }
+}
+
+.animate-glow-pulse {
+  animation: glow-pulse 4s ease-in-out infinite;
+}
+
 /* Base Styles */
 @layer base {
   @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700;900&display=swap');

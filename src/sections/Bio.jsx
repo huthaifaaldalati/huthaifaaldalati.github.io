@@ -78,32 +78,32 @@ const Bio = () => {
                         </div>
                     </div>
 
-                    <div className={`bg-bg-primary/50 p-8 rounded-3xl border border-white/10 mb-10 max-w-3xl mx-auto fade-up ${isVisible ? 'visible' : ''}`} style={{ transitionDelay: '800ms' }}>
-                        <h4 className="text-xl text-gray-400 mb-6">هذا السِستم خلاصة أكثر من</h4>
-                        <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16">
-                            <div className="flex flex-col items-center justify-center">
-                                <span className="text-6xl md:text-8xl font-black text-brand-cyan mb-2 drop-shadow-[0_0_15px_rgba(34,211,238,0.6)] text-center">
+                    <div className={`bg-bg-primary/50 p-8 rounded-3xl border border-white/10 mb-10 w-full fade-up ${isVisible ? 'visible' : ''}`} style={{ transitionDelay: '800ms' }}>
+                        <h4 className="text-3xl md:text-5xl font-bold mb-12 text-white drop-shadow-[0_0_25px_rgba(34,211,238,0.5)]">هذا السِستم خلاصة أكثر من</h4>
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <div className="bg-white/5 p-8 rounded-3xl border border-white/5 hover:border-brand-cyan/30 hover:bg-white/10 transition-all duration-300 flex flex-col items-center justify-center group">
+                                <span className="text-5xl md:text-7xl font-black text-brand-cyan mb-4 drop-shadow-[0_0_15px_rgba(34,211,238,0.6)] text-center group-hover:scale-110 transition-transform duration-300">
                                     <SlotCounter value="5" />
                                 </span>
                                 <span className="text-2xl font-bold text-brand-cyan mb-1 text-center">سنين</span>
-                                <span className="text-gray-300 text-center">خبرة</span>
+                                <span className="text-gray-300 text-center text-lg">خبرة</span>
                             </div>
-                            <div className="w-px h-28 bg-white/10 hidden md:block mt-6"></div>
-                            <div className="flex flex-col items-center justify-center">
-                                <span className="text-6xl md:text-8xl font-black text-brand-cyan mb-2 drop-shadow-[0_0_15px_rgba(34,211,238,0.6)] text-center">
+
+                            <div className="bg-white/5 p-8 rounded-3xl border border-white/5 hover:border-brand-cyan/30 hover:bg-white/10 transition-all duration-300 flex flex-col items-center justify-center group">
+                                <span className="text-5xl md:text-7xl font-black text-brand-cyan mb-4 drop-shadow-[0_0_15px_rgba(34,211,238,0.6)] text-center group-hover:scale-110 transition-transform duration-300">
                                     <SlotCounter value="125" />
                                 </span>
                                 <span className="text-2xl font-bold text-brand-cyan mb-1 text-center">مليون</span>
-                                <span className="text-gray-300 text-center">مشاهدة</span>
+                                <span className="text-gray-300 text-center text-lg">مشاهدة</span>
                             </div>
-                            <div className="w-px h-28 bg-white/10 hidden md:block mt-6"></div>
-                            <div className="flex flex-col items-center justify-center">
-                                <span className="flex items-center justify-center text-6xl md:text-8xl font-black text-brand-cyan mb-2 drop-shadow-[0_0_15px_rgba(34,211,238,0.6)]" dir="ltr">
+
+                            <div className="bg-white/5 p-8 rounded-3xl border border-white/5 hover:border-brand-cyan/30 hover:bg-white/10 transition-all duration-300 flex flex-col items-center justify-center group">
+                                <span className="flex items-center justify-center text-5xl md:text-7xl font-black text-brand-cyan mb-4 drop-shadow-[0_0_15px_rgba(34,211,238,0.6)] group-hover:scale-110 transition-transform duration-300" dir="ltr">
                                     <span>$</span>
                                     <SlotCounter value="400" />
                                 </span>
                                 <span className="text-2xl font-bold text-brand-cyan mb-1 text-center">ألف</span>
-                                <span className="text-gray-300 text-center">مبيعات</span>
+                                <span className="text-gray-300 text-center text-lg">مبيعات</span>
                             </div>
                         </div>
                     </div>

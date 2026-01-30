@@ -29,9 +29,14 @@ const Hero = () => {
                     </span>
                 </h1>
 
-                <p className={`text-xl md:text-2xl mb-10 text-gray-400 max-w-3xl mx-auto leading-relaxed fade-up ${isVisible ? 'visible' : ''}`} style={{ transitionDelay: '400ms' }}>
-                    تعلم الأسرار يلي ساعدتني أوصل لأكثر من ١٢٥ مليون مشاهدة و ٤٠٠ ألف دولار مبيعات في ٤ ساعات فقط
-                </p>
+                <div className={`text-2xl md:text-4xl mb-10 text-white max-w-4xl mx-auto leading-relaxed font-bold fade-up flex flex-col md:flex-row md:flex-wrap md:justify-center md:gap-x-2 items-center gap-y-2 ${isVisible ? 'visible' : ''}`} style={{ transitionDelay: '400ms' }}>
+                    <span>تعلم الأسرار يلي ساعدتني أوصل لأكثر من</span>
+                    <span className="text-brand-cyan animate-glow-pulse">١٢٥ مليون مشاهدة</span>
+                    <span>و</span>
+                    <span className="text-brand-pink animate-glow-pulse" style={{ animationDelay: '1.3s' }}>٤٠٠ ألف دولار مبيعات</span>
+                    <span>في</span>
+                    <span className="text-brand-violet animate-glow-pulse" style={{ animationDelay: '2.6s' }}>٤ ساعات فقط</span>
+                </div>
 
                 {/* Video Container */}
                 <div className={`hidden relative w-full max-w-4xl aspect-video rounded-3xl overflow-hidden glass shadow-[0_0_50px_rgba(188,19,254,0.2)] border-brand-violet/30 group animate-float fade-up ${isVisible ? 'visible' : ''}`} style={{ transitionDelay: '600ms' }}>
