@@ -3,6 +3,7 @@ import Button from '../components/Button';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 import { useCountUp } from '../hooks/useCountUp';
 import profileImage from '../assets/blfbml;fbmlf.png';
+import SlotCounter from '../components/SlotCounter';
 
 const StatCard = ({ end, label, prefix = "", suffix = "" }) => {
     const [count, ref] = useCountUp(end, 2000);
@@ -71,7 +72,7 @@ const Bio = () => {
                             </h3>
                             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center text-gray-300">
                                 <StatCard end={10000} label="متابع في 14 يوم" />
-                                <StatCard end={4170} label="أول مبيعة في 21 يوم" prefix="$" />
+                                <StatCard end={4170} label="دخل في 21 يوم" prefix="$" />
                                 <StatCard end={32214} label="متابع عبر المنصات" prefix="+" />
                             </div>
                         </div>
@@ -80,14 +81,29 @@ const Bio = () => {
                     <div className={`bg-bg-primary/50 p-8 rounded-3xl border border-white/10 mb-10 max-w-3xl mx-auto fade-up ${isVisible ? 'visible' : ''}`} style={{ transitionDelay: '800ms' }}>
                         <h4 className="text-xl text-gray-400 mb-6">هذا السِستم خلاصة أكثر من</h4>
                         <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16">
-                            <div className="flex flex-col items-center">
-                                <span className="text-4xl md:text-5xl font-bold text-brand-cyan mb-2">125 مليون</span>
-                                <span className="text-gray-300">مشاهدة</span>
+                            <div className="flex flex-col items-center justify-center">
+                                <span className="text-6xl md:text-8xl font-black text-brand-cyan mb-2 drop-shadow-[0_0_15px_rgba(34,211,238,0.6)] text-center">
+                                    <SlotCounter value="5" />
+                                </span>
+                                <span className="text-2xl font-bold text-brand-cyan mb-1 text-center">سنين</span>
+                                <span className="text-gray-300 text-center">خبرة</span>
                             </div>
-                            <div className="w-px h-12 bg-white/10 hidden md:block"></div>
-                            <div className="flex flex-col items-center">
-                                <span className="text-4xl md:text-5xl font-bold text-brand-cyan mb-2">+400,000</span>
-                                <span className="text-gray-300">دولار مبيعات</span>
+                            <div className="w-px h-28 bg-white/10 hidden md:block mt-6"></div>
+                            <div className="flex flex-col items-center justify-center">
+                                <span className="text-6xl md:text-8xl font-black text-brand-cyan mb-2 drop-shadow-[0_0_15px_rgba(34,211,238,0.6)] text-center">
+                                    <SlotCounter value="125" />
+                                </span>
+                                <span className="text-2xl font-bold text-brand-cyan mb-1 text-center">مليون</span>
+                                <span className="text-gray-300 text-center">مشاهدة</span>
+                            </div>
+                            <div className="w-px h-28 bg-white/10 hidden md:block mt-6"></div>
+                            <div className="flex flex-col items-center justify-center">
+                                <span className="flex items-center justify-center text-6xl md:text-8xl font-black text-brand-cyan mb-2 drop-shadow-[0_0_15px_rgba(34,211,238,0.6)]" dir="ltr">
+                                    <span>$</span>
+                                    <SlotCounter value="400" />
+                                </span>
+                                <span className="text-2xl font-bold text-brand-cyan mb-1 text-center">ألف</span>
+                                <span className="text-gray-300 text-center">مبيعات</span>
                             </div>
                         </div>
                     </div>

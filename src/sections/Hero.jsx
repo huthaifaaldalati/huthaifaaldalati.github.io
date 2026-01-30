@@ -30,11 +30,11 @@ const Hero = () => {
                 </h1>
 
                 <p className={`text-xl md:text-2xl mb-10 text-gray-400 max-w-3xl mx-auto leading-relaxed fade-up ${isVisible ? 'visible' : ''}`} style={{ transitionDelay: '400ms' }}>
-                    تعلم الأسرار يلي ساعدتني أوصل لأكثر من ١٢٥ مليون مشاهدة و ٤٠٠ ألف دولار مبيعات
+                    تعلم الأسرار يلي ساعدتني أوصل لأكثر من ١٢٥ مليون مشاهدة و ٤٠٠ ألف دولار مبيعات في ٤ ساعات فقط
                 </p>
 
                 {/* Video Container */}
-                <div className={`relative w-full max-w-4xl aspect-video rounded-3xl overflow-hidden glass shadow-[0_0_50px_rgba(188,19,254,0.2)] border-brand-violet/30 group animate-float fade-up ${isVisible ? 'visible' : ''}`} style={{ transitionDelay: '600ms' }}>
+                <div className={`hidden relative w-full max-w-4xl aspect-video rounded-3xl overflow-hidden glass shadow-[0_0_50px_rgba(188,19,254,0.2)] border-brand-violet/30 group animate-float fade-up ${isVisible ? 'visible' : ''}`} style={{ transitionDelay: '600ms' }}>
 
                     <div className="absolute inset-0 bg-gradient-to-t from-bg-secondary via-transparent to-transparent opacity-60"></div>
 

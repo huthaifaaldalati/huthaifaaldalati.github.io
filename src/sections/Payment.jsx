@@ -25,7 +25,7 @@ const Payment = () => {
 
                     <div className="flex flex-col items-center justify-center mb-10 gap-2">
                         <span className="text-8xl font-black text-transparent bg-clip-text bg-gradient-to-r from-white via-brand-cyan to-brand-violet font-display">
-                            $97
+                            $73
                         </span>
                         <span className="text-3xl text-gray-500 line-through decoration-2 decoration-red-500">$147</span>
                     </div>
