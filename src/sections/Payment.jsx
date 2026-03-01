@@ -51,7 +51,7 @@ const Payment = () => {
                     </div>
 
                     <a
-                        href="https://whop.com/huthaifaaldalati/digital-presence-code/"
+                        href="https://whop.com/huthaifaaldalati/viralaty-alphabet/"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="block w-full py-5 text-2xl font-bold rounded-2xl bg-gradient-to-r from-brand-violet via-brand-pink to-brand-violet text-white animate-gradient-xy hover:scale-105 hover:shadow-[0_0_40px_rgba(188,19,254,0.4)] transition-all duration-300 active:scale-95 mb-6 text-center"
